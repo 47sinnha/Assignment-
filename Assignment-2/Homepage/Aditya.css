@@ -1,0 +1,755 @@
+@media (min-width:1500px) {
+  body{
+    /* background-color: rgb(37, 43, 72);  */
+    background-color: white;
+   }
+   
+   .mainc{
+       width: 1500px;
+       margin: 0px auto;
+   }
+   
+   
+   .subc{
+       width: 1200px;
+       text-align: center;
+       /* border: 1px solid lightgray; */
+       margin: 10px auto;
+       padding-left: 90px;
+       padding-right: 40px;
+       /* background-color: rgb(239,241,243); */
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   .navbar {
+     /* background: rgba(152, 218, 133, 0.9); Transparent background with 70% opacity */
+     background-color: rgb(255, 255, 255, 0.5);
+     backdrop-filter: blur(10px); 
+     display: flex;
+     /* border: 1px solid lightgray; */
+     padding: 1px;
+     margin-top: 15px;
+     justify-content: space-between;
+     align-items: center;
+     position: sticky;
+     top: 0px;
+     border-top-left-radius: 50px;
+     border-bottom-left-radius: 50px;
+     border-top-right-radius: 10px;
+     border-bottom-right-radius:10px;
+     /* padding-left: 90px;
+     padding-right: 90px; */
+     /* border-bottom: 1px solid lightgray;  */
+   }
+   
+   .navbar:after {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     height: 0px;
+     width: calc(100% - 20%);
+     border: 1px solid lightgray;
+     transform: translateX(-50%);
+   }
+   
+   
+   h2{
+       color: black;
+       /* margin-bottom: 0px; */
+   }
+   
+   .dropdown-button{
+       color: black;
+       /* margin-top: auto; */
+       /* text-align: center; */
+   }
+   
+   .USER{
+       color: black;
+       /* margin-top: auto; */
+   
+   
+   }
+   
+   p, .cool-notepad {
+       width: 100%;
+       padding: 10px;
+       font-size: 16px;
+       border: none;
+       border-radius: 5px;
+       resize: none;
+       background-color: rgba(240, 244, 255, 0.8);
+       color: #333;
+       outline: none;
+       transition: border-color 0.1s, box-shadow 0.3s;
+       min-height: 380px; /* Set a minimum height */
+       height: auto; /* Automatically adjust height */
+       overflow-y: hidden; /* Hide scrollbar */
+   }
+   
+   p:hover {
+       box-shadow: 0 0 10px rgba(41, 255, 48, 0.7);
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   @keyframes wordDanceAnimation {
+       0% {
+         transform: translateY(0) rotate(0deg);
+         color: #ff0000; /* Change color during the animation */
+       }
+       25% {
+         transform: translateY(-10px) rotate(45deg);
+       }
+       50% {
+         transform: translateY(0) rotate(0deg);
+         color: #00ff00; /* Change color during the animation */
+       }
+       75% {
+         transform: translateY(-10px) rotate(-45deg);
+       }
+       100% {
+         transform: translateY(0) rotate(0deg);
+         color: #0000ff; /* Change color during the animation */
+       }
+     }
+     
+     .dance {
+       cursor: pointer;
+     }
+     
+     /* Apply unique animations to each word */
+     .word-1 {
+       animation: wordDanceAnimation 1s infinite;
+     }
+     
+     .word-2 {
+       animation: wordDanceAnimation 1s infinite 0.1s;
+     }
+     
+     .word-3 {
+       animation: wordDanceAnimation 1s infinite 0.2s;
+     }  
+     h3:hover {
+       cursor: pointer;
+       animation: danceAnimation 1s infinite;
+     }
+   
+   h3 {
+       font-family: 'Arial', sans-serif;
+       color: #3498db; /* Set your desired text color */
+       text-align: center;
+       padding: 10px;
+       border: 2px solid #3498db; /* Set your desired border color */
+       border-radius: 5px;
+       cursor: pointer;
+       transition: transform 0.5s ease-in-out; /* Add a smooth transition effect for the animation */
+   }
+   
+   h3:hover {
+       background-color: #3498db; /* Change background color on hover */
+       color: #fff; /* Change text color on hover */
+   }
+   
+   
+   
+   .dropdown {
+     position: relative;
+     display: inline-block;
+     box-sizing: border-box;
+   }
+   
+   /* Style for the dropdown button */
+   .dropdown-button {
+     /* padding: 10px; */
+     background-color: #3498db;
+     color: white;
+     border: none;
+     cursor: pointer;
+     font-size: 19px;
+     font-weight: bold;
+     color:#006666; /* You can change the color as needed */
+     text-transform: uppercase;
+   }
+   
+   /* Style for the dropdown content */
+   .dropdown-content {
+     display: none;
+     position: absolute;
+     background: rgb(0, 0, 0); /* Transparent black background */
+     backdrop-filter: blur(50px); /* Blurring effect */
+     min-width: 160px;
+     top: 100%;
+     left: 0px;
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+   }
+   
+   /* Style for the dropdown items */
+   .dropdown-item {
+     text-decoration: none;
+     padding: 12px 16px;
+     display: block;
+     cursor: pointer;
+     color: white;
+   }
+   
+   /* Change color on hover for dropdown items */
+   .dropdown-item:hover {
+     background: lightseagreen;
+     backdrop-filter: blur(50px);
+   }
+   
+   /* Show the dropdown content when hovering over the dropdown button */
+   .dropdown:hover .dropdown-content {
+     display: block;
+   }
+   
+   
+   
+   .USER {
+     border-radius: 50%; /* This creates a circular shape */
+     width: 50px; /* Set the width to your desired size */
+     height: 50px; /* Set the height to the same value as the width */
+     overflow: hidden; /* This ensures the content doesn't overflow outside the circle */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: url(./User-Profile-PNG-Image.png) center/cover; 
+     background-color: white;
+   }
+   .USER:hover {
+       cursor: pointer;
+   }
+   
+   #invisible-text{
+     display: none;
+   }
+   
+   #btn {
+     /* display: inline-block; */
+     margin: 0 auto;
+     padding: 15px 30px;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     background: rgba(1, 255, 103, 0.7); /* Transparent green background */
+    /* Blurring effect */
+     font-size: 15px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: #fff; /* Text color */
+     transition: background 0.3s ease-in-out; /* Smooth transition for background change */
+   
+     /* Centering text both horizontally and vertically */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 125px;
+   }
+   
+   #btn:hover {
+     background: rgba(1, 255, 103, 1); /* Fully opaque green background on hover */
+     animation: shake 0.5s ease; /* Shake animation on hover */
+   }
+   
+   @keyframes shake {
+     0%, 100% {
+       transform: translateX(0);
+     }
+     25%, 75% {
+       transform: translateX(-5px);
+     }
+     50% {
+       transform: translateX(5px);
+     }
+   }
+   
+   .About-Me{
+     /* display: flex; */
+     width: 100%;
+     height: 500px;
+     margin-top: 300px;
+     margin-bottom: 0px;
+     position: relative;
+   }
+   
+   
+   
+   
+   .img{
+     height: 100%;
+     /* display: flex; */
+     margin-top: 0px;
+     /* border: 0.3px solid rgb(27, 191, 101); */
+     border-radius: 10px;
+     border-right: #0000ff;
+   }
+   
+   .textarea {
+     /* position: absolute; */
+   }
+   
+   .image {
+     height: 90px;
+     display: flex;
+     background-color: rgba(0, 0, 0, 0.9); /* Use the same background color as .navbar */
+     border: 0.3px solid rgb(255, 255, 255);
+     border-radius: 50px;
+   }
+   
+   .img img{
+    position: absolute;
+    
+    transform: translate(-50%, -50%);
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+   }
+   
+   
+   
+   /* 
+   
+   
+   .aboutme {
+     background-color: #ffffff; 
+     color: black;
+     padding: 10px 20px;
+     font-size: 16px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     margin: 0px;
+     top: 70px;
+     left: 80px;
+     transform: translate(5px, -30px);
+     
+   }
+   
+   .aboutme:hover {
+     background-color: #2980b9; 
+   } */
+   
+   
+   .izm-0:hover{
+     background-color: rgb(130, 0, 130);
+   }
+   
+   .izam{
+     color: white;
+     text-decoration: none;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     display: block;
+     padding: 0px;
+   }
+   
+   .izm-1:hover{
+     background-color: rgb(81, 55, 153);
+   }
+   
+   .About-Me:hover{
+     box-shadow: 0 0 10px rgba(41, 255, 48, 0.7);
+   }
+}
+
+
+
+/* small screen */
+@media(max-width:1500px){
+  body{
+    /* background-color: rgb(37, 43, 72);  */
+    background-color: white;
+    /* display: block; */
+   }
+   
+   .mainc{
+       /* width: 1500px; */
+       /* margin: 0px auto; */
+   }
+   
+   
+   .subc{
+       /* width: 1200px; */
+       text-align: center;
+       /* border: 1px solid lightgray; */
+       margin: 10px auto;
+       padding-left: 90px;
+       padding-right: 40px;
+       /* background-color: rgb(239,241,243); */
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   .navbar {
+    background-color: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    /* border: 1px solid lightgray; */
+    padding: 1px;
+    margin-top: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* border-bottom: 1px solid lightgray; */
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* flex-direction: column; */
+}
+   
+   .navbar:after {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     height: 0px;
+     width: calc(100% - 20%);
+     border: 1px solid lightgray;
+     transform: translateX(-50%);
+   }
+   
+   
+   h2{
+       color: black;
+       /* margin-bottom: 0px; */
+   }
+   
+   .dropdown-button{
+       color: black;
+       /* margin-top: auto; */
+       /* text-align: center; */
+   }
+   
+   .USER{
+       color: black;
+       /* margin-top: auto; */
+   
+   
+   }
+   
+   p, .cool-notepad {
+       /* width: 100%; */
+       padding: 10px;
+       font-size: 16px;
+       border: none;
+       border-radius: 5px;
+       resize: none;
+       background-color: rgba(240, 244, 255, 0.8);
+       color: #333;
+       outline: none;
+       transition: border-color 0.1s, box-shadow 0.3s;
+       min-height: 380px; /* Set a minimum height */
+       height: auto; /* Automatically adjust height */
+       overflow-y: hidden; /* Hide scrollbar */
+   }
+   
+   p:hover {
+       box-shadow: 0 0 10px rgba(41, 255, 48, 0.7);
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   @keyframes wordDanceAnimation {
+       0% {
+         transform: translateY(0) rotate(0deg);
+         color: #ff0000; /* Change color during the animation */
+       }
+       25% {
+         transform: translateY(-10px) rotate(45deg);
+       }
+       50% {
+         transform: translateY(0) rotate(0deg);
+         color: #00ff00; /* Change color during the animation */
+       }
+       75% {
+         transform: translateY(-10px) rotate(-45deg);
+       }
+       100% {
+         transform: translateY(0) rotate(0deg);
+         color: #0000ff; /* Change color during the animation */
+       }
+     }
+     
+     .dance {
+       cursor: pointer;
+     }
+     
+     /* Apply unique animations to each word */
+     .word-1 {
+       animation: wordDanceAnimation 1s infinite;
+     }
+     
+     .word-2 {
+       animation: wordDanceAnimation 1s infinite 0.1s;
+     }
+     
+     .word-3 {
+       animation: wordDanceAnimation 1s infinite 0.2s;
+     }  
+     h3:hover {
+       cursor: pointer;
+       animation: danceAnimation 1s infinite;
+     }
+   
+   h3 {
+       font-family: 'Arial', sans-serif;
+       color: #3498db; /* Set your desired text color */
+       text-align: center;
+       padding: 10px;
+       border: 2px solid #3498db; /* Set your desired border color */
+       border-radius: 5px;
+       cursor: pointer;
+       transition: transform 0.5s ease-in-out; /* Add a smooth transition effect for the animation */
+   }
+   
+   h3:hover {
+       background-color: #3498db; /* Change background color on hover */
+       color: #fff; /* Change text color on hover */
+   }
+   
+   
+   
+   .dropdown {
+     position: relative;
+     display: inline-block;
+     box-sizing: border-box;
+   }
+   
+   /* Style for the dropdown button */
+   .dropdown-button {
+     /* padding: 10px; */
+     background-color: #3498db;
+     color: white;
+     border: none;
+     cursor: pointer;
+     font-size: 19px;
+     font-weight: bold;
+     color:#006666; /* You can change the color as needed */
+     text-transform: uppercase;
+   }
+   
+   /* Style for the dropdown content */
+   .dropdown-content {
+     display: none;
+     position: absolute;
+     background: rgb(0, 0, 0); /* Transparent black background */
+     backdrop-filter: blur(50px); /* Blurring effect */
+     min-width: 160px;
+     top: 100%;
+     left: 0px;
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+   }
+   
+   /* Style for the dropdown items */
+   .dropdown-item {
+     text-decoration: none;
+     padding: 12px 16px;
+     display: block;
+     cursor: pointer;
+     color: white;
+   }
+   
+   /* Change color on hover for dropdown items */
+   .dropdown-item:hover {
+     background: lightseagreen;
+     backdrop-filter: blur(50px);
+   }
+   
+   /* Show the dropdown content when hovering over the dropdown button */
+   .dropdown:hover .dropdown-content {
+     display: block;
+   }
+   
+   
+   
+   .USER {
+     border-radius: 50%; /* This creates a circular shape */
+     width: 50px; 
+     height: 50px; 
+     overflow: hidden; 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: url(./User-Profile-PNG-Image.png) center/cover; 
+     background-color: white;
+   }
+   .USER:hover {
+       cursor: pointer;
+   }
+   
+   #invisible-text{
+     display: none;
+   }
+   
+   #btn {
+     display: inline-block;
+     margin: 0 auto;
+     padding: 15px 30px;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     background: rgba(1, 255, 103, 0.7); /* Transparent green background */
+     /* backdrop-filter: blur(10px); Blurring effect */
+     font-size: 15px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: #fff; /* Text color */
+     transition: background 0.3s ease-in-out; /* Smooth transition for background change */
+   
+     /* Centering text both horizontally and vertically */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 125px;
+   }
+   
+   #btn:hover {
+     background: rgba(1, 255, 103, 1); /* Fully opaque green background on hover */
+     animation: shake 0.5s ease; /* Shake animation on hover */
+   }
+   
+   @keyframes shake {
+     0%, 100% {
+       transform: translateX(0);
+     }
+     25%, 75% {
+       transform: translateX(-5px);
+     }
+     50% {
+       transform: translateX(5px);
+     }
+   }
+   
+   .About-Me{
+    /* display: flex; */
+    /* width: 1500px; */
+    /* width: auto; */
+    height: auto;
+    margin-top: 520px;
+    position: relative;
+  
+  }
+  
+  
+  
+  
+  /*  */
+  
+  .textarea {
+    /* position: absolute; */
+    margin-top: 0px;
+  }
+  
+  .image {
+    height: 90px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.9); /* Use the same background color as .navbar */
+    border: 0.3px solid rgb(255, 255, 255);
+    border-radius: 50px;
+  }
+  
+  
+  .img img{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+
+  .details{
+   box-sizing: content-box;
+  }
+
+   /* 
+   
+   
+   .aboutme {
+     background-color: #ffffff; 
+     color: black;
+     padding: 10px 20px;
+     font-size: 16px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     margin: 0px;
+     top: 70px;
+     left: 80px;
+     transform: translate(5px, -30px);
+     
+   }
+   
+   .aboutme:hover {
+     background-color: #2980b9; 
+   } */
+   
+   
+   .izm-0:hover{
+     background-color: rgb(130, 0, 130);
+   }
+   
+   .izam{
+     color: white;
+     text-decoration: none;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     display: block;
+     padding: 0px;
+   }
+   
+   .izm-1:hover{
+     background-color: rgb(81, 55, 153);
+   }
+   
+   .About-Me:hover{
+     box-shadow: 0 0 10px rgba(41, 255, 48, 0.7);
+   }
+   
+   
+}
+
+
+@media screen {
+  
+}
+
